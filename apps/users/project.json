@@ -8,15 +8,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/users",
         "index": "apps/users/src/index.html",
         "main": "apps/users/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/users/tsconfig.app.json",
-        "assets": ["apps/users/src/favicon.ico", "apps/users/src/assets"],
-        "styles": ["apps/users/src/styles.scss"],
+        "assets": [
+          "apps/users/src/favicon.ico",
+          "apps/users/src/assets"
+        ],
+        "styles": [
+          "@angular/material/prebuilt-themes/deeppurple-amber.css",
+          "apps/users/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -66,14 +76,21 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/users/**/*.ts", "apps/users/**/*.html"]
+        "lintFilePatterns": [
+          "apps/users/**/*.ts",
+          "apps/users/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/users/jest.config.ts",
         "passWithNoTests": true
