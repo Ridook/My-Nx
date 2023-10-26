@@ -1,0 +1,35 @@
+<div class="container">
+  <mat-card class="mat-card-wrapper">
+    <mat-card-header class="mat-card-header">
+      <img mat-card-avatar [src]="avatarSrc" alt="" class="user-photo" />
+    </mat-card-header>
+
+    <mat-card-content class="mat-card-content"
+      >Name: <strong>{{ user?.name }}</strong>
+    </mat-card-content>
+
+    <mat-card-content class="mat-card-content"
+      >Username: <strong>{{ user?.username }}</strong>
+    </mat-card-content>
+
+    <mat-card-content class="mat-card-content">
+      Email: <strong>{{ user?.email }}</strong>
+    </mat-card-content>
+
+    <mat-card-content class="mat-card-content">
+      City: <strong>{{ user?.address?.city }}</strong>
+    </mat-card-content>
+
+    <mat-menu #menu>
+      <button mat-menu-item color="accent" (click)="deleteUser(user?.id!)">
+        Удалить
+      </button>
+    </mat-menu>
+
+    <mat-card-actions class="mat-actions">
+      <button mat-icon-button [mat-menu-trigger-for]="menu">
+        <mat-icon>more_horiz</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

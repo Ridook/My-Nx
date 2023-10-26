@@ -1,1 +1,2 @@
-<p>users-list-container works!</p>
+ <org-users-list [users]="users$ | ngrxPush" (deleteUser)="deleteUser($event)"> </org-users-list>
+

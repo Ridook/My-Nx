@@ -1,0 +1,26 @@
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  position: relative;
+
+  .mat-card-wrapper {
+    background-color: rgb(243, 241, 238);
+    align-items: center;
+    width: 400px;
+    margin: 15px 10px 15px 20px;
+    .user-photo {
+      width: 50px;
+      height: 70px;
+    }
+  }
+  .mat-card-content {
+    margin-bottom: 5px;
+  }
+  .mat-actions {
+    position: absolute;
+    right: 5px;
+  }
+}
